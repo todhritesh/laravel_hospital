@@ -51,12 +51,6 @@ Route::middleware('auth')->group(function(){
 
         Route::get('/total/patient',[AdminController::class,"totalPatientView"])->name('total.patient.view');
 
-        Route::get('/register', [RegisteredUserController::class, 'create'])
-                ->middleware('guest')
-                ->name('register');
-
-        Route::post('/register', [RegisteredUserController::class, 'store'])
-                ->middleware('guest');
 
 
     });
